@@ -1,0 +1,155 @@
+   <!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Avangard Auto — Объявления</title>
+    <!-- Подключаем Bootstrap 5 CSS -->
+    <link href="https://jsdelivr.net" rel="stylesheet">
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f8f9fa;
+        }
+        /* Шапка */
+        .header {
+            background-color: #e25300;
+            color: white;
+            padding: 30px 15px;
+            text-align: center;
+        }
+        /* Меню над объявлениями */
+        .custom-nav {
+            background-color: #d80101 !important;
+        }
+        .custom-nav .nav-link {
+            color: white !important;
+            font-size: 16px;
+            font-weight: bold;
+            transition: all 0.3s ease;
+        }
+        .custom-nav .nav-link:hover {
+            color: #ffca2c !important;
+        }
+        /* Стили карточек */
+        .card {
+            box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+            border: none;
+            transition: transform 0.2s;
+        }
+        .card:hover {
+            transform: translateY(-5px);
+        }
+        .card-img-top {
+            height: 200px;
+            object-fit: cover;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- 1. ШАПКА -->
+    <div class="header">
+        <h1 class="fw-bold">Avangard Auto</h1>
+        <p class="lead mb-0">Ваш надёжный партнёр в выборе автомобиля</p>
+    </div>
+
+    <!-- 2. МЕНЮ (НАВИГАЦИЯ) — СТРОГО НАД ОБЪЯВЛЕНИЯМИ -->
+    <nav class="navbar navbar-expand-lg custom-nav shadow-sm">
+        <div class="container justify-content-center">
+            <ul class="navbar-nav flex-row gap-4 m-0 p-0">
+                <li class="nav-item"><a class="nav-link" href="index.html">Главная</a></li>
+                <li class="nav-item"><a class="nav-link" href="about.html">О нас</a></li>
+                <li class="nav-item"><a class="nav-link" href="services.html">Услуги</a></li>
+                <li class="nav-item"><a class="nav-link" href="contacts.html">Контакты</a></li>
+                <li class="nav-item"><a class="nav-link active border-bottom border-white" href="advertisements.html">Объявления</a></li>
+            </ul>
+        </div>
+    </nav>
+
+    <!-- 3. СЕКЦИЯ ОБЪЯВЛЕНИЙ (РЯДАМИ ПО 3 ШТУКИ) -->
+    <div id="advertisements" class="container mt-5 text-center">
+        <h2 class="mb-4 fw-bold text-dark">Наши объявления</h2>
+        
+        <!-- row-cols-md-3 заставляет Bootstrap автоматически держать ровно по 3 колонки в ряду -->
+        <div class="row row-cols-1 row-cols-sm-2 row-cols-md-3 g-4 justify-content-center">
+            
+            <!-- Карточка 1 -->
+            <div class="col d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img src="avs.webp" class="card-img-top" alt="BMW M5 Competition">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title fw-bold">BMW M5 Competition</h5>
+                        <p class="card-text text-muted">BMW M5 Competition VI (F90) Рестайлинг 2020 года.<br><strong>Цена: 11 500 000 ₽</strong></p>
+                        <a href="advertisements.html" class="btn btn-danger mt-auto">Открыть</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 2 -->
+            <div class="col d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img src="i.webp" class="card-img-top" alt="Mercedes-Benz CLS">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title fw-bold">Mercedes-Benz CLS</h5>
+                        <p class="card-text text-muted">Mercedes-Benz CLS 2014 года.<br><strong>Цена: 3 000 000 ₽</strong></p>
+                        <a href="advertisements.html" class="btn btn-danger mt-auto">Открыть</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 3 -->
+            <div class="col d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img src="i1.webp" class="card-img-top" alt="BMW M8 F92">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title fw-bold">BMW M8 F92</h5>
+                        <p class="card-text text-muted">BMW M8 F92 2019 года.<br><strong>Цена: 17 850 999 ₽</strong></p>
+                        <a href="advertisements.html" class="btn btn-danger mt-auto">Открыть</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 4 (Автоматически перейдет на второй ряд первым элементом) -->
+            <div class="col d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img src="i2.webp" class="card-img-top" alt="Vaz 2114">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title fw-bold">ВАЗ 2114</h5>
+                        <p class="card-text text-muted">ВАЗ 2114 2011 года.<br><strong>Цена: 150 000 ₽</strong></p>
+                        <a href="advertisements.html" class="btn btn-danger mt-auto">Открыть</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 5 -->
+            <div class="col d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img src="i3.webp" class="card-img-top" alt="Kia Rio">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title fw-bold">Kia Rio</h5>
+                        <p class="card-text text-muted">Kia Rio 2015 года.<br><strong>Цена: 850 000 ₽</strong></p>
+                        <a href="advertisements.html" class="btn btn-danger mt-auto">Открыть</a>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Карточка 6 -->
+            <div class="col d-flex align-items-stretch">
+                <div class="card w-100">
+                    <img src="i4.webp" class="card-img-top" alt="Opel Astra">
+                    <div class="card-body d-flex flex-column justify-content-between">
+                        <h5 class="card-title fw-bold">Opel Astra</h5>
+                        <p class="card-text text-muted">Opel Astra 2011 года.<br><strong>Цена: 550 550 ₽</strong></p>
+                        <a href="advertisements.html" class="btn btn-danger mt-auto">Открыть</a>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </div>
+
+    <!-- Подключаем JS Bootstrap -->
+    <script src="https://jsdelivr.net"></script>
+</body>
+</html>

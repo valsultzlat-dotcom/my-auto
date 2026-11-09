@@ -1,0 +1,26 @@
+.navbar-nav .nav-link {
+    color: #ffffff !important;
+    text-decoration: none !important;
+    font-family: Arial, sans-serif;
+    font-size: 16px;
+    font-weight: 500;
+    
+    /* ОБЯЗАТЕЛЬНО: делаем элемент блочно-строчным, чтобы работал transform: scale */
+    display: inline-block; 
+    
+    /* Добавляем transform в список плавных переходов transition, чтобы вдавливание происходило мягко */
+    transition: color 0.2s ease-in-out, background-color 0.2s ease-in-out, transform 0.1s ease-in-out;
+    
+    padding: 6px 12px !important;
+    border-radius: 4px;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #ffe600 !important; /* Цвет текста станет приятно-желтым при наведении */
+    background-color: rgba(255, 255, 255, 0.1); /* Появится легкий полупрозрачный фон */
+}
+
+.navbar-nav .nav-link:active {
+    color: #f3b51a !important; /* Цвет при самом моменте нажатия */
+    transform: scale(0.95); /* Сделали нажатие чуть более заметным (95% от исходного размера) */
+}
